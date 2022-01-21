@@ -6,6 +6,8 @@ const router=new express.Router()
 
 router.get('/',userController.home);
 router.post('/signup',userController.createUser);
+router.get('/readUser',auth,userController.readUser);
+router.patch('/updateUser',auth,userController.updateUser);
 router.post('/login',userController.login);
 router.post('/logout',auth,userController.logout);
 
@@ -13,5 +15,6 @@ router.get('/jobHome',jobController.home);
 router.post('/createJob',auth,jobController.createJob);
 router.get('/findAllJob',jobController.findAllJob);
 router.post('/findAllJobCat',jobController.findAllJobCat);
+router.post('/findAllJobPos',jobController.findAllJobPos);
 
 module.exports=router

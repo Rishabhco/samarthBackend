@@ -56,7 +56,28 @@ const findAllJobCat = async (req, res) => {
     } catch (error) {
       res.status(400).json({
         status: false,
-        message: "Unable to read all the jobs",
+        message: "Unable to read the jobs",
+        errors: error,
+        data: {},
+      });
+    }
+  };
+
+  const findAllJobPos = async (req, res) => {
+    try {
+      const job = await Jobs.find({"jobInfo.title":req.body.position});
+      res.status(200).json({
+        status: true,
+        message: "All Jobs of specific position",
+        errors: [],
+        data: {
+          jobs: job,
+        },
+      });
+    } catch (error) {
+      res.status(400).json({
+        status: false,
+        message: "Unable to read the jobs",
         errors: error,
         data: {},
       });
@@ -64,10 +85,10 @@ const findAllJobCat = async (req, res) => {
   };
 
 
-
 module.exports = {
   home,
   createJob,
   findAllJob,
-  findAllJobCat
+  findAllJobCat,
+  findAllJobPos
 };
