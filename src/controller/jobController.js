@@ -42,6 +42,28 @@ const findAllJob = async (req, res) => {
   }
 };
 
+
+const findSpecificJob = async (req, res) => {
+  try {
+    const job = await Jobs.find({}).limit(parseInt(req.query.limit));
+    res.status(200).json({
+      status: true,
+      message: "All Jobs",
+      errors: [],
+      data: {
+        jobs: job,
+      },
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: false,
+      message: "Unable to read all the jobs",
+      errors: error,
+      data: {},
+    });
+  }
+};
+
 const findAllJobCat = async (req, res) => {
     try {
       const job = await Jobs.find({"jobInfo.disabilityType":req.body.category});
@@ -90,5 +112,6 @@ module.exports = {
   createJob,
   findAllJob,
   findAllJobCat,
-  findAllJobPos
+  findAllJobPos,
+  findSpecificJob
 };
