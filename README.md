@@ -6,6 +6,10 @@ Samarth is a project that aims to provide employment opportunities for people wi
 This idea comes from a very personal space for us, as seeing the plight of people with being unable to express themselves in the corporate world is very saddening; there are not a lot of resources for the same.
 <br>
 
+## Deployment
+
+Deployment made on Heroku
+Hosted Link: https://samarthbackend.herokuapp.com/
 
 ## 🛠️ Built With
 - HTML
