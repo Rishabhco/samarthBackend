@@ -53,7 +53,8 @@ const updateUser=async(req,res)=>{
         return res.status(400).send('Invalid updates!')
     }
     try{
-        const user=await User.findById(req.user._id)
+        const id=req.params.id
+        const user=await User.findById(id)
         
         updates.forEach((update)=>user[update]=req.body[update])
         
