@@ -15,7 +15,6 @@ router.get('/jobHome',jobController.home);
 router.post('/createJob',auth,jobController.createJob);
 router.get('/findAllJob',jobController.findAllJob);
 router.get('/findSpecificJob',jobController.findSpecificJob);
-router.post('/findAllJobCat',jobController.findAllJobCat);
 router.post('/findAllJobPos',jobController.findAllJobPos);
 
 module.exports=router
