@@ -9,7 +9,8 @@ This idea comes from a very personal space for us, as seeing the plight of peopl
 ## Deployment
 
 Deployment made on Heroku
--Hosted Link: https://samarthbackend.herokuapp.com/
+
+- Hosted Link: https://samarthbackend.herokuapp.com/
 
 ## 🛠️ Built With
 - HTML
