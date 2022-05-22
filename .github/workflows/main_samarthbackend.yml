@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'samarthbackend'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4257D778EBBD4B95A2F9B239B7D27B7E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5EDB2161C8794BBF9B0017C59C5D89F9 }}
           package: .
