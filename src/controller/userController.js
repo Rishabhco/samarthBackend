@@ -86,7 +86,6 @@ const updateUser=async(req,res)=>{
 }
 
 
-
 const logout =async(req,res)=>{
     try{
         req.user.tokens=req.user.tokens.filter((token)=>{
